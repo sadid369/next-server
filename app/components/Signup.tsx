@@ -15,6 +15,7 @@ export default function SignupForm() {
     e.preventDefault();
 
     try {
+      //
       // Make a POST request to the server-side API route
       const response = await axios.post("/api/user", {
         name,
