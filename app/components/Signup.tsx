@@ -18,11 +18,10 @@ export default function SignupForm() {
       //
       // Make a POST request to the server-side API route
       const response = await axios.post("/api/user", {
-        name,
-        email,
+        username: name,
         password,
       });
-
+      console.log("Form submission successful:", response.data);
       // Redirect to the dashboard on success
       router.push("/");
     } catch (error) {
